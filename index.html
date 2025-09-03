@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Toni Grubesic — Portfolio</title>
   <meta name="description" content="Mechanical Engineer — Design • Prototyping • Automation. Battery test automation, ultracold atom chamber, IMU telemetry." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 
   <!-- SEO / Social preview -->
   <link rel="canonical" href="https://TG-Works.github.io/Portfolio/">
@@ -37,10 +41,13 @@
       <div class="hero hero-split">
         <div class="hero-text">
           <h1>Mechanical Engineer</h1>
+          <h1>Mechanical Engineer &amp; Automation Specialist</h1>
           <p class="lead">
             Minimal, focused, and hands-on. I design, prototype, and automate —
             from battery test systems to ultracold atom chamber hardware and
             motorcycle telemetry. Comfortable taking problems from concept → design → build → test.
+            I build clean, reliable hardware—from battery test platforms to ultracold atom apparatus and motorcycle telemetry.
+            Comfortable guiding projects from concept through design, fabrication, and validation.
           </p>
 
           <div class="quick-grid">
@@ -54,6 +61,7 @@
             </div>
             <div class="qcard">
               <div class="qtitle">Hobbies</div>
+              <div class="qtitle">Interests</div>
               <div class="qbody">Motorcycles, CNC/3D printing, composites, building data displays.</div>
             </div>
           </div>
@@ -79,170 +87,3 @@
 
       <details class="card">
         <summary><strong>Motorcycle Telemetry & Lean-Angle System</strong> <span class="muted">• 2024–present</span></summary>
-        <div class="grid two">
-          <div>
-            <p><strong>Problem:</strong> Rider-friendly analytics for lean angle, braking, throttle, and tire/road temps.</p>
-            <p><strong>Approach:</strong> ICM-42688-V + sensor fusion; custom PCB + firmware; CAN/GPS; compact TFT UI.</p>
-            <p><strong>How:</strong> 3D printed/CNC enclosures; Python logging tools; calibration rigs; on-bike tests.</p>
-            <p><strong>Results:</strong> ~1° accuracy target, low latency, modular sensor architecture.</p>
-            <div class="tags"><span>IMU</span><span>Embedded</span><span>Python</span><span>Fusion 360</span></div>
-          </div>
-          <div class="gallery">
-            <img src="images/imu-1.jpg" alt="IMU board / UI" loading="lazy" decoding="async">
-            <img src="images/imu-2.jpg" alt="Calibration rig" loading="lazy" decoding="async">
-            <img src="images/imu-3.jpg" alt="On-bike test" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </details>
-
-      <details class="card">
-        <summary><strong>Ultracold Atom Chamber (R1 Research)</strong> <span class="muted">• 2022–2024</span></summary>
-        <div class="grid two">
-          <div>
-            <p><strong>Problem:</strong> Precision, vacuum integrity, and thermal control for atom trapping near absolute zero.</p>
-            <p><strong>Approach:</strong> Co-designed chamber; fabricated precision parts; integrated vacuum/thermal/instrumentation.</p>
-            <p><strong>How:</strong> SolidWorks + GD&amp;T; machining/welding; bakeout fixtures; instrumentation wiring & scripts.</p>
-            <p><strong>Results:</strong> Commissioned subsystems; documented procedures; presented progress.</p>
-            <div class="tags"><span>SolidWorks</span><span>GD&T</span><span>Vacuum</span><span>Instrumentation</span></div>
-          </div>
-          <div class="gallery">
-            <img src="images/ultra-1.jpg" alt="Chamber / lab setup" loading="lazy" decoding="async" width="1200" height="750">
-            <img src="images/ultra-2.jpg" alt="Vacuum hardware" loading="lazy" decoding="async">
-            <img src="images/ultra-3.jpg" alt="Integration bench" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </details>
-
-      <details class="card">
-        <summary><strong>SAE Baja — Chassis & Welding</strong> <span class="muted">• 2022–2023</span></summary>
-        <div class="grid two">
-          <div>
-            <p><strong>Problem:</strong> Weight vs. rigidity while meeting rulebook constraints.</p>
-            <p><strong>Approach:</strong> FEA-guided tubing & joints; jigged welding; post-weld verification.</p>
-            <p><strong>How:</strong> Cut lists, fixtures, TIG welds, deflection tests.</p>
-            <p><strong>Results:</strong> Reliable chassis with verified rigidity and serviceability.</p>
-            <div class="tags"><span>SolidWorks</span><span>FEA (basic)</span><span>Welding</span></div>
-          </div>
-          <div class="gallery">
-            <img src="images/baja-1.jpg" alt="Chassis welding" loading="lazy" decoding="async">
-            <img src="images/baja-2.jpg" alt="Fixture" loading="lazy" decoding="async">
-            <img src="images/baja-3.jpg" alt="Validation test" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </details>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="tab" aria-labelledby="experience">
-      <h2>Experience</h2>
-
-      <div class="timeline">
-        <div class="titem">
-          <div class="twhen">2024–2025</div>
-          <div class="trole"><strong>Automation Engineer (Battery Testing)</strong> — LLNL</div>
-          <ul>
-            <li>Built Python/LabVIEW automation orchestrating cyclers, PSUs, and chambers.</li>
-            <li>Modular instrument drivers, recipe engine, safety interlocks.</li>
-            <li>Real-time logging, QC checks, auto-reports; authored docs and trained users.</li>
-          </ul>
-        </div>
-
-        <div class="titem">
-          <div class="twhen">Summer 2024</div>
-          <div class="trole"><strong>Project Engineer Intern</strong> — Harder Mechanical Contractors</div>
-          <ul>
-            <li>Resource-loaded P6 schedules with standardized WBS.</li>
-            <li>Milestone tracking & cost dashboards; RFIs/changes supported.</li>
-          </ul>
-        </div>
-
-        <div class="titem">
-          <div class="twhen">2017–2024</div>
-          <div class="trole"><strong>Technician / Office</strong> — GB Heating & AC</div>
-          <ul>
-            <li>Diagnostics, repairs, compliance documentation, and reliability improvements.</li>
-            <li>Root-cause analysis; customer scheduling & coordination.</li>
-          </ul>
-        </div>
-
-        <div class="titem">
-          <div class="twhen">2022–2024</div>
-          <div class="trole"><strong>R1 Research Assistant</strong> — CSU Chico</div>
-          <ul>
-            <li>3-year effort designing/building a chamber to super-cool atoms near absolute zero.</li>
-            <li>Precision parts, vacuum/thermal/instrumentation integration, commissioning.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="grid two">
-        <div class="card">
-          <h3>Education</h3>
-          <p><strong>B.S., Mechanical Engineering</strong> — California State University, Chico</p>
-        </div>
-        <div class="card">
-          <h3>Technical Skills</h3>
-          <p><strong>CAD/CAE:</strong> SolidWorks, Fusion 360, basic FEA, GD&amp;T, DFM/DFA</p>
-          <p><strong>Manufacturing:</strong> CNC (3-axis), manual mill/lathe, welding, carbon fiber, 3D printing</p>
-          <p><strong>Automation & Data:</strong> Python, Arduino, MATLAB, instrumentation (SCPI/serial), Git</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="tab" aria-labelledby="contact">
-      <h2>Contact</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>Get in touch</h3>
-          <ul class="contact-list">
-            <li><span>Email</span><a href="mailto:tonigrubesic2002@gmail.com?subject=Inquiry%20from%20Portfolio">tonigrubesic2002@gmail.com</a></li>
-            <li><span>Phone</span><a href="tel:+19254573482">(925) 457-3482</a></li>
-            <li><span>Location</span><em>Pleasant Hill, CA</em></li>
-            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/toni-grubesic-24b116348" target="_blank" rel="noopener">linkedin.com/in/toni-grubesic-24b116348</a></li>
-            <li><span>GitHub</span><a href="https://github.com/TG-Works" target="_blank" rel="noopener">github.com/TG-Works</a></li>
-            <li><span>Website</span><a href="#" target="_blank" rel="noopener">tg-works.com</a></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Files</h3>
-          <ul>
-            <li><a class="button" href="assets/Toni_Grubesic_Resume_Modern.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a></li>
-            <li><span class="muted">Add case studies, drawings, and spec sheets here.</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">© <span id="year"></span> Toni Grubesic</footer>
-
-  <script>
-    // Simple hash-based router + active state
-    function show(tab) {
-      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-      const el = document.getElementById(tab);
-      (el || document.getElementById('home')).classList.add('active');
-
-      document.querySelectorAll('[data-tab]').forEach(a => {
-        const on = a.dataset.tab === tab;
-        a.classList.toggle('active', on);
-        if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
-      });
-    }
-    window.addEventListener('hashchange', () => show(location.hash.replace('#','') || 'home'));
-    window.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('year').textContent = new Date().getFullYear();
-      show(location.hash.replace('#','') || 'home');
-
-      // runtime checks ("tests")
-      console.assert(document.getElementById('home'), 'Home missing');
-      console.assert(document.getElementById('projects'), 'Projects missing');
-      console.assert(document.getElementById('experience'), 'Experience missing');
-      console.assert(document.getElementById('contact'), 'Contact missing');
-      const resume = document.querySelector('a[href^="assets/"][href$=".pdf"]');
-      console.assert(resume, 'Resume link missing');
-    });
-  </script>
-</body>
-</html>
