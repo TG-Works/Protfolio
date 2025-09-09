@@ -25,6 +25,32 @@ body{
   line-height: 1.55;
 }
 
+/* ===== Light theme overrides ===== */
+:root[data-theme="light"]{
+  --bg: #f6f7fb;
+  --surf: #ffffff;
+  --border: #e8eaf0;
+  --muted: #5c6270;
+  --text: #111318;
+  /* keep brand colors the same; they look fine on light */
+}
+
+/* Light background (override the dark gradients) */
+:root[data-theme="light"] body{
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #e6eeff 0%, transparent 60%) no-repeat,
+    radial-gradient(800px 400px at -10% 10%, #f2f4ff 0%, transparent 60%) no-repeat,
+    var(--bg);
+  color: var(--text);
+}
+
+/* optional: softer active pill on light */
+:root[data-theme="light"] .links a.active,
+:root[data-theme="light"] .links a[aria-current="page"]{
+  background: rgba(0,0,0,.06);
+  outline: 1px solid #d7dae3;
+}
+
 /* ---------- Header / Nav ---------- */
 .site-header{
   position: sticky; top: 0; z-index: 50;
