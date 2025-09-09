@@ -1,7 +1,7 @@
-/* ---------- Theme tokens ---------- */
+/* ---------- Theme tokens (dark as default) ---------- */
 :root{
   --bg: #0b0c10;
-  --surf: #0f1117;         /* card surface */
+  --surf: #0f1117;
   --border: #1a2030;
   --muted: #a3a7b3;
   --text: #e8eaf0;
@@ -16,39 +16,12 @@ html,body{ height:100%; }
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  /* this was missing — gave you a white page */
   background:
     radial-gradient(1200px 600px at 80% -10%, #132032 0%, transparent 60%) no-repeat,
     radial-gradient(800px 400px at -10% 10%, #231b2e 0%, transparent 60%) no-repeat,
     var(--bg);
-  color: var(--text);      /* this was ignored when variables weren't defined */
-  line-height: 1.55;
-}
-
-/* ===== Light theme overrides ===== */
-:root[data-theme="light"]{
-  --bg: #f6f7fb;
-  --surf: #ffffff;
-  --border: #e8eaf0;
-  --muted: #5c6270;
-  --text: #111318;
-  /* keep brand colors the same; they look fine on light */
-}
-
-/* Light background (override the dark gradients) */
-:root[data-theme="light"] body{
-  background:
-    radial-gradient(1200px 600px at 80% -10%, #e6eeff 0%, transparent 60%) no-repeat,
-    radial-gradient(800px 400px at -10% 10%, #f2f4ff 0%, transparent 60%) no-repeat,
-    var(--bg);
   color: var(--text);
-}
-
-/* optional: softer active pill on light */
-:root[data-theme="light"] .links a.active,
-:root[data-theme="light"] .links a[aria-current="page"]{
-  background: rgba(0,0,0,.06);
-  outline: 1px solid #d7dae3;
+  line-height: 1.55;
 }
 
 /* ---------- Header / Nav ---------- */
@@ -87,7 +60,7 @@ body{
 
 .container{ max-width: var(--maxw); margin: auto; padding: 28px 20px 80px; }
 
-/* ---------- Tabs (+ no-JS fallback) ---------- */
+/* ---------- Tabs (with no-JS fallback) ---------- */
 .tab{ display: none; }
 .tab.active,
 .tab:target{ display: block; animation: fade .28s ease; }
@@ -119,7 +92,7 @@ body{
   background: var(--surf);
   border: 1px solid var(--border);
   border-radius: 14px; padding: 12px;
-  color: var(--text);               /* ensure readable text on dark card */
+  color: var(--text);
 }
 .qtitle{ font-weight: 700; margin-bottom: 2px; }
 .muted{ color: var(--muted); }
@@ -169,8 +142,29 @@ details.card > div{ padding: 0 16px 16px; }
   .quick-grid{ grid-template-columns: 1fr; }
 }
 
-/* No-JS info */
+/* ---------- No-JS info ---------- */
 .noscript{
   max-width: var(--maxw); margin: 0 auto; padding: 10px 20px;
   color: #111; background: #fffae6; border: 1px solid #ffe58f;
+}
+
+/* ---------- Light theme overrides ---------- */
+:root[data-theme="light"]{
+  --bg: #f6f7fb;
+  --surf: #ffffff;
+  --border: #e8eaf0;
+  --muted: #5c6270;
+  --text: #111318;
+}
+:root[data-theme="light"] body{
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #e6eeff 0%, transparent 60%) no-repeat,
+    radial-gradient(800px 400px at -10% 10%, #f2f4ff 0%, transparent 60%) no-repeat,
+    var(--bg);
+  color: var(--text);
+}
+:root[data-theme="light"] .links a.active,
+:root[data-theme="light"] .links a[aria-current="page"]{
+  background: rgba(0,0,0,.06);
+  outline: 1px solid #d7dae3;
 }
