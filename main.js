@@ -36,7 +36,7 @@
     }
   }
 
-  // Clicks on any element with data-tab
+  // Clicks on any element with data-tab (ignore theme-toggle etc.)
   document.addEventListener('click', e => {
     const link = e.target.closest('[data-tab]');
     if (!link) return;
