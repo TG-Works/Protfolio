@@ -112,6 +112,25 @@ details.card[open]{ box-shadow: 0 16px 40px rgba(2,6,23,0.08); }
 .twhen{color:var(--muted);font-size:.9rem}
 .trole{margin:4px 0 6px 0}
 .titem ul{margin:6px 0 0 18px}
+/* Tabs */
+.tab { display: none; }
+.tab.active {
+  display: block;
+  animation: fade 0.25s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Active nav state */
+.links a.active,
+.links a[aria-current="page"] {
+  background: #151823;
+  outline: 1px solid #1e2230;
+  border-radius: 10px;
+}
 
 /* contact */
 .contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
