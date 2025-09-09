@@ -1,64 +1,127 @@
+<!doctype html>
 <html lang="en">
-<p>Pi 5 + IMU + GNSS + TFT dash. Live lean angle, g-load, GPS speed/track, and ECU parameters. Custom PCB harness with waterproof connectors. Stage 1: outdoor tests; Stage 2: waterproof integration.</p>
-<ul>
-<li>Sensor fusion on-bike (BNO085 + NEO-M9N)</li>
-<li>Telemetry UI with multiple pages / trail mode</li>
-<li>Custom 3D-printed housing, vibration &amp; weather protection</li>
-</ul>
-</div>
-</details>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toni Grubesic — Portfolio</title>
 
-<details class="card" style="margin-top:12px">
-<summary><strong>Battery Test Automation (LLNL)</strong> <span class="muted">• 2023–2024</span></summary>
-<div>
-<p>Python/LabVIEW tooling to automate battery cycling, data logging, and report generation. Designed fixtures and safety interlocks.</p>
-</div>
-</details>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-<details class="card" style="margin-top:12px">
-<summary><strong>Ultracold Atom Chamber</strong> <span class="muted">• 2022–2023</span></summary>
-<div>
-<p>Built ultra-high-vacuum (UHV) chamber components, alignment jigs, and thermal management hardware; collaborated with physics team.</p>
-</div>
-</details>
-</section>
+  <!-- Styles (NOTE the ./ relative path) -->
+  <link rel="stylesheet" href="./style.css?v=8" />
 
-<!-- EXPERIENCE -->
-<section id="experience" class="tab" role="tabpanel" aria-labelledby="nav-experience">
-<h2>Experience</h2>
-<div class="timeline">
-<div class="item">
-<strong>Lawrence Livermore National Laboratory</strong> — Battery Test Automation
-<div class="meta">2023–2024 · Python, LabVIEW, test fixtures</div>
-<p>Automated cycling workflows, data acquisition, and reporting. Developed fixtures and safety interlocks.</p>
-</div>
-<div class="item">
-<strong>Harder Mechanical</strong> — Project Engineer Intern
-<div class="meta">2023 · Scheduling, cost control, vendor coordination</div>
-<p>Supported mechanical construction projects; Primavera P6, change orders, and logistics.</p>
-</div>
-<div class="item">
-<strong>GB Heating &amp; AC</strong> — Field / Service
-<div class="meta">2016–present</div>
-<p>Hands-on diagnostics and installs; customer-facing requirements gathering and solution design.</p>
-</div>
-</div>
-</section>
+  <!-- JS (deferred) -->
+  <script src="./main.js?v=8" defer></script>
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <nav class="nav" role="navigation" aria-label="Main">
+      <a class="brand" href="#home" data-tab="home" role="tab" aria-selected="true" aria-controls="home">Toni Grubesic</a>
+      <div class="links" role="tablist" aria-label="Primary">
+        <a href="#home" data-tab="home" role="tab" aria-controls="home" aria-selected="true" aria-current="page">Home</a>
+        <a href="#projects" data-tab="projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
+        <a href="#experience" data-tab="experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
+        <a href="#contact" data-tab="contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        <a class="button ghost" href="./assets/Toni_Grubesic_Resume_Modern.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+    </nav>
+  </header>
 
-<!-- CONTACT -->
-<section id="contact" class="tab" role="tabpanel" aria-labelledby="nav-contact">
-<h2>Contact</h2>
-<p class="muted">Open to full-time roles and contract work. Let’s build something.</p>
-<div class="contact-list">
-<a href="mailto:tonigrubesic98@gmail.com">Email: tonigrubesic98@gmail.com</a>
-<a href="https://github.com/TG-Works" target="_blank" rel="noopener">GitHub: TG-Works</a>
-<a href="https://www.linkedin.com/in/toni-grubesic" target="_blank" rel="noopener">LinkedIn: /in/toni-grubesic</a>
-</div>
-</section>
-</main>
+  <main class="container">
+    <!-- HOME -->
+    <section id="home" class="tab active" role="tabpanel" aria-labelledby="nav-home">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Mechanical Engineer &amp; Automation Specialist</h1>
+          <p class="lead">
+            Minimal, focused, and hands-on. I design, prototype, and automate —
+            from battery test systems to ultracold atom chamber hardware and motorcycle telemetry.
+            Comfortable guiding projects from concept → design → build → validation.
+          </p>
+          <div class="quick-grid">
+            <div class="qcard"><div class="qtitle">Experience</div><div class="qbody">LLNL battery test automation · Harder Mechanical PE intern · 7+ yrs HVAC field/service.</div></div>
+            <div class="qcard"><div class="qtitle">Education</div><div class="qbody">B.S. Mechanical Engineering — CSU Chico.</div></div>
+            <div class="qcard"><div class="qtitle">Interests</div><div class="qbody">Motorcycles, CNC/3D printing, composites, embedded telemetry.</div></div>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="#projects" data-tab="projects" role="tab" aria-controls="projects">See Projects</a>
+            <a class="button" href="./assets/Toni_Grubesic_Resume_Modern.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="./images/preview.jpg" alt="Ultracold atom lab — team and chamber setup" loading="eager" decoding="async" width="1200" height="630">
+        </div>
+      </div>
+    </section>
 
-<noscript>
-<div class="noscript">JavaScript is off — tabs will still work, but multiple sections may show at once.</div>
-</noscript>
+    <!-- PROJECTS -->
+    <section id="projects" class="tab" role="tabpanel" aria-labelledby="nav-projects">
+      <h2>Projects</h2>
+      <p class="muted">High-level first. Click to expand for details and images.</p>
+
+      <details class="card">
+        <summary><strong>Motorcycle Telemetry &amp; Lean-Angle System</strong> <span class="muted">• 2024–present</span></summary>
+        <div>
+          <p>Pi 5 + IMU + GNSS + TFT dash. Live lean angle, g-load, GPS speed/track, and ECU parameters. Custom PCB harness with waterproof connectors. Stage 1: outdoor tests; Stage 2: waterproof integration.</p>
+          <ul>
+            <li>Sensor fusion on-bike (BNO085 + NEO-M9N)</li>
+            <li>Telemetry UI with multiple pages / trail mode</li>
+            <li>Custom 3D-printed housing, vibration &amp; weather protection</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="card" style="margin-top:12px">
+        <summary><strong>Battery Test Automation (LLNL)</strong> <span class="muted">• 2023–2024</span></summary>
+        <div><p>Python/LabVIEW tooling to automate battery cycling, data logging, and report generation. Designed fixtures and safety interlocks.</p></div>
+      </details>
+
+      <details class="card" style="margin-top:12px">
+        <summary><strong>Ultracold Atom Chamber</strong> <span class="muted">• 2022–2023</span></summary>
+        <div><p>Built ultra-high-vacuum (UHV) chamber components, alignment jigs, and thermal management hardware; collaborated with physics team.</p></div>
+      </details>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="tab" role="tabpanel" aria-labelledby="nav-experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="item">
+          <strong>Lawrence Livermore National Laboratory</strong> — Battery Test Automation
+          <div class="meta">2023–2024 · Python, LabVIEW, test fixtures</div>
+          <p>Automated cycling workflows, data acquisition, and reporting. Developed fixtures and safety interlocks.</p>
+        </div>
+        <div class="item">
+          <strong>Harder Mechanical</strong> — Project Engineer Intern
+          <div class="meta">2023 · Scheduling, cost control, vendor coordination</div>
+          <p>Supported mechanical construction projects; Primavera P6, change orders, and logistics.</p>
+        </div>
+        <div class="item">
+          <strong>GB Heating &amp; AC</strong> — Field / Service
+          <div class="meta">2016–present</div>
+          <p>Hands-on diagnostics and installs; customer-facing requirements gathering and solution design.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="tab" role="tabpanel" aria-labelledby="nav-contact">
+      <h2>Contact</h2>
+      <p class="muted">Open to full-time roles and contract work. Let’s build something.</p>
+      <div class="contact-list">
+        <a href="mailto:tonigrubesic98@gmail.com">Email: tonigrubesic98@gmail.com</a>
+        <a href="https://github.com/TG-Works" target="_blank" rel="noopener">GitHub: TG-Works</a>
+        <a href="https://www.linkedin.com/in/toni-grubesic" target="_blank" rel="noopener">LinkedIn: /in/toni-grubesic</a>
+      </div>
+    </section>
+  </main>
+
+  <noscript>
+    <div class="noscript">JavaScript is off — tabs will still work, but multiple sections may show at once.</div>
+  </noscript>
 </body>
 </html>
