@@ -10,24 +10,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Styles (NOTE the ./ relative path) -->
-  <link rel="stylesheet" href="./style.css?v=9" />
-
-  <!-- JS (deferred) -->
-  <script src="./main.js?v=9" defer></script>
+  <!-- Styles & Script (relative paths for project pages) -->
+  <link rel="stylesheet" href="./style.css?v=11" />
+  <script src="./main.js?v=11" defer></script>
 </head>
 <body>
   <!-- HEADER / NAV -->
   <header class="site-header">
     <nav class="nav" role="navigation" aria-label="Main">
       <a class="brand" href="#home" data-tab="home" role="tab" aria-selected="true" aria-controls="home">Toni Grubesic</a>
+
       <div class="links" role="tablist" aria-label="Primary">
         <a href="#home" data-tab="home" role="tab" aria-controls="home" aria-selected="true" aria-current="page">Home</a>
         <a href="#projects" data-tab="projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
         <a href="#experience" data-tab="experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
+        <a href="#resume" data-tab="resume" role="tab" aria-controls="resume" aria-selected="false">Resume</a>
         <a href="#contact" data-tab="contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+
+        <!-- theme toggle (not a tab) -->
         <button id="theme-toggle" class="button ghost" type="button" aria-pressed="false" title="Toggle theme">🌙</button>
-        <a class="button ghost" href="./assets/Toni_Grubesic_Resume_Modern.pdf" target="_blank" rel="noopener">Download Resume</a>
+
+        <!-- open/download PDF directly (not a tab) -->
+        <a class="button ghost" href="./assets/Toni_Grubesic_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
       </div>
     </nav>
   </header>
@@ -43,16 +47,28 @@
             from battery test systems to ultracold atom chamber hardware and motorcycle telemetry.
             Comfortable guiding projects from concept → design → build → validation.
           </p>
+
           <div class="quick-grid">
-            <div class="qcard"><div class="qtitle">Experience</div><div class="qbody">LLNL battery test automation · Harder Mechanical PE intern · 7+ yrs HVAC field/service.</div></div>
-            <div class="qcard"><div class="qtitle">Education</div><div class="qbody">B.S. Mechanical Engineering — CSU Chico.</div></div>
-            <div class="qcard"><div class="qtitle">Interests</div><div class="qbody">Motorcycles, CNC/3D printing, composites, embedded telemetry.</div></div>
+            <div class="qcard">
+              <div class="qtitle">Experience</div>
+              <div class="qbody">LLNL battery test automation · Harder Mechanical PE intern · 7+ yrs HVAC field/service.</div>
+            </div>
+            <div class="qcard">
+              <div class="qtitle">Education</div>
+              <div class="qbody">B.S. Mechanical Engineering — CSU Chico.</div>
+            </div>
+            <div class="qcard">
+              <div class="qtitle">Interests</div>
+              <div class="qbody">Motorcycles, CNC/3D printing, composites, embedded telemetry.</div>
+            </div>
           </div>
+
           <div class="actions">
             <a class="button primary" href="#projects" data-tab="projects" role="tab" aria-controls="projects">See Projects</a>
-            <a class="button" href="./assets/Toni_Grubesic_Resume_Modern.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            <a class="button" href="./assets/Toni_Grubesic_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
           </div>
         </div>
+
         <div class="hero-media">
           <img src="./images/preview.jpg" alt="Ultracold atom lab — team and chamber setup" loading="eager" decoding="async" width="1200" height="630">
         </div>
@@ -106,6 +122,26 @@
           <div class="meta">2016–present</div>
           <p>Hands-on diagnostics and installs; customer-facing requirements gathering and solution design.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- RESUME (inline PDF viewer) -->
+    <section id="resume" class="tab" role="tabpanel" aria-labelledby="nav-resume">
+      <h2>Resume</h2>
+      <p class="muted">View inline or open in a new tab.</p>
+
+      <div class="card" style="padding:0; overflow:hidden;">
+        <!-- Put your PDF at ./assets/Toni_Grubesic_Resume.pdf -->
+        <iframe
+          src="./assets/Toni_Grubesic_Resume.pdf#view=FitH"
+          title="Toni Grubesic — Resume (PDF)"
+          style="width:100%; height:70vh; border:0;"
+        ></iframe>
+      </div>
+
+      <div class="actions" style="margin-top:10px;">
+        <a class="button primary" href="./assets/Toni_Grubesic_Resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        <a class="button" href="./assets/Toni_Grubesic_Resume.pdf" download>Download PDF</a>
       </div>
     </section>
 
