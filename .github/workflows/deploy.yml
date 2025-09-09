@@ -1,15 +1,14 @@
-# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [ main ]   # ← change to 'master' if that's your default
+  workflow_dispatch:      # manual run button
 
 permissions:
-  contents: read      # to read the repo
-  pages: write        # to deploy to Pages
-  id-token: write     # to use OIDC for Pages
+  contents: read          # read the repo
+  pages: write            # deploy to Pages
+  id-token: write         # OIDC for Pages
 
 # Ensure only one deploy per branch at a time
 concurrency:
@@ -22,14 +21,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # If you ever build assets, add your build steps here
-      # e.g., npm ci && npm run build
-
+      # If you add a build later (npm, vite, etc.), run it here and
+      # change 'path' below to your build output folder.
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          # where your built site lives; for static HTML place your repo root
-          path: "./"
+          path: "./"    # serves repo root (index.html, style.css, main.js)
 
   deploy:
     environment:
