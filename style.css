@@ -5,8 +5,8 @@
   --border: #1a2030;
   --muted: #a3a7b3;
   --text: #e8eaf0;
-  --brand: #4cc9ff;
-  --brand-2: #9bf6ff;
+  --brand: #4cc9ff;   /* matches See Projects button */
+  --brand-2: #9bf6ff; /* gradient end */
   --maxw: 1100px;
 }
 
@@ -25,32 +25,37 @@ body{
 }
 
 /* ---------- Header / Nav ---------- */
+/* Header uses the same blue gradient as the primary button */
 .site-header{
   position: sticky; top: 0; z-index: 50;
-  background: rgba(11,12,16,.75);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #151823;
+  background: linear-gradient(180deg, var(--brand), var(--brand-2));
+  border-bottom: 1px solid rgba(0,0,0,.15);
 }
 .nav{
   max-width: var(--maxw);
   margin: auto;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 12px 20px; gap: 12px;
+  padding: 10px 20px; gap: 12px;
 }
-.brand{ font-weight: 800; letter-spacing: .2px; text-decoration: none; color: var(--text); }
+.brand{
+  font-weight: 900; letter-spacing: .2px; text-decoration: none;
+  color: #04121a; /* dark text over bright header */
+  font-size: clamp(24px, 2.6vw, 32px); /* bigger brand */
+}
 .links{ display: flex; flex-wrap: wrap; gap: 10px; }
 .links a{
-  color: var(--text); text-decoration: none;
+  color: #04121a; text-decoration: none; /* dark text on blue header */
   padding: 8px 10px; border-radius: 10px;
 }
 .links a.active,
 .links a[aria-current="page"]{
-  background: rgba(255,255,255,.08);
-  outline: 1px solid #1e2230;
+  background: rgba(0,0,0,.06);
+  outline: 1px solid rgba(0,0,0,.15);
 }
 .button{
-  display: inline-block; padding: 10px 14px; border-radius: 12px;
-  border: 1px solid #2a3042; text-decoration: none; color: var(--text); font-weight: 600;
+  display: inline-block; padding: 9px 12px; border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.15); text-decoration: none; color: #04121a; font-weight: 700;
+  background: rgba(255,255,255,.28);
 }
 .button.primary{
   background: linear-gradient(180deg, var(--brand), var(--brand-2));
@@ -58,12 +63,15 @@ body{
 }
 .button.ghost{ background: transparent; }
 
-.container{ max-width: var(--maxw); margin: auto; padding: 28px 20px 80px; }
+.container{ max-width: var(--maxw); margin: auto; padding: 20px 20px 56px; }
+
+/* Reduce empty space: tighter hero */
+.compact-hero{ gap: 20px; }
 
 /* ---------- Tabs (with no-JS fallback) ---------- */
 .tab{ display: none; }
 .tab.active,
-.tab:target{ display: block; animation: fade .28s ease; }
+.tab:target{ display: block; animation: fade .24s ease; }
 
 @keyframes fade{
   from{ opacity:0; transform: translateY(6px); }
@@ -72,8 +80,8 @@ body{
 
 /* ---------- Hero ---------- */
 .hero{
-  display: grid; grid-template-columns: 1.15fr .85fr;
-  gap: 28px; align-items: center;
+  display: grid; grid-template-columns: 1.1fr .9fr;
+  gap: 24px; align-items: center;
 }
 .hero-media img{
   width: 100%; height: auto;
@@ -86,7 +94,7 @@ body{
 /* ---------- Quick cards ---------- */
 .quick-grid{
   display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 12px; margin: 18px 0;
+  gap: 10px; margin: 14px 0;
 }
 .qcard{
   background: var(--surf);
@@ -96,12 +104,12 @@ body{
 }
 .qtitle{ font-weight: 700; margin-bottom: 2px; }
 .muted{ color: var(--muted); }
-.actions{ display:flex; gap:10px; margin-top:8px; }
+.actions{ display:flex; gap:10px; margin-top:10px; }
 
 /* ---------- Typography / cards ---------- */
 h1,h2{ line-height:1.15; }
-h1{ font-size: clamp(28px, 3vw, 42px); margin: 10px 0; }
-h2{ font-size: clamp(22px, 2.4vw, 30px); margin: 8px 0 14px; }
+h1{ font-size: clamp(28px, 3vw, 42px); margin: 8px 0; }
+h2{ font-size: clamp(22px, 2.4vw, 30px); margin: 6px 0 12px; }
 
 .card, details.card{
   background: var(--surf);
