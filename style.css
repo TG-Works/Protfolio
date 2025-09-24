@@ -5,8 +5,8 @@
   --border: #1a2030;
   --muted: #a3a7b3;
   --text: #e8eaf0;
-  --brand: #4cc9ff;   /* matches See Projects button */
-  --brand-2: #9bf6ff; /* gradient end */
+  --brand: #4cc9ff;
+  --brand-2: #9bf6ff;
   --maxw: 1100px;
 }
 
@@ -38,7 +38,7 @@ body{
 }
 .brand{
   font-weight: 900; letter-spacing: .2px; text-decoration: none;
-  color: #04121a; /* dark text over bright header */
+  color: #04121a;
   font-size: clamp(24px, 2.6vw, 32px);
 }
 .links{ display: flex; flex-wrap: wrap; gap: 10px; }
@@ -63,13 +63,12 @@ body{
 .button.ghost{ background: transparent; }
 
 .container{ max-width: var(--maxw); margin: auto; padding: 20px 20px 56px; }
-
-/* Reduce empty space: tighter hero */
 .compact-hero{ gap: 20px; }
 
 /* ---------- Tabs ---------- */
 .tab{ display: none; }
-.tab.active,
+/* Only show .active tabs when JS is present. Always allow :target. */
+.js .tab.active,
 .tab:target{ display: block; animation: fade .24s ease; }
 
 @keyframes fade{
@@ -150,6 +149,20 @@ details.card > div{ padding: 0 16px 16px; }
 .tagset { display:flex; flex-wrap:wrap; gap:8px; }
 .tagset span { padding:6px 10px; border:1px solid var(--border); border-radius:12px; background: var(--surf); }
 
+/* ---------- Contact form ---------- */
+.contact-form{
+  display:grid; gap:10px;
+}
+.contact-form label{
+  display:grid; gap:6px; font-weight:600;
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%; padding:10px 12px; border-radius:12px;
+  border:1px solid var(--border); background: var(--surf); color: var(--text);
+}
+.contact-form button{ align-self:start; }
+
 /* ---------- Focus & mobile ---------- */
 :focus-visible{ outline: 2px solid var(--brand); outline-offset:2px; }
 
@@ -191,6 +204,6 @@ details.card > div{ padding: 0 16px 16px; }
 @media print {
   .site-header, .links, .hero-media, .actions { display:none !important; }
   body { background:#fff; color:#000; }
-  .tab { display:block !important; } /* print all sections */
+  .tab { display:block !important; }
   a::after { content:" (" attr(href) ")"; font-size:90%; }
 }
