@@ -1,5 +1,8 @@
 // Tabs + theme toggle with deep linking and history support
 (() => {
+  // Mark that JS is running (prevents double-tab display if JS fails)
+  document.documentElement.classList.add('js');
+
   // ----- Tabs -----
   const tabs  = Array.from(document.querySelectorAll('.tab'));
   const links = Array.from(document.querySelectorAll('[data-tab]'));
