@@ -25,7 +25,6 @@ body{
 }
 
 /* ---------- Header / Nav ---------- */
-/* Header uses the same blue gradient as the primary button */
 .site-header{
   position: sticky; top: 0; z-index: 50;
   background: linear-gradient(180deg, var(--brand), var(--brand-2));
@@ -40,11 +39,11 @@ body{
 .brand{
   font-weight: 900; letter-spacing: .2px; text-decoration: none;
   color: #04121a; /* dark text over bright header */
-  font-size: clamp(24px, 2.6vw, 32px); /* bigger brand */
+  font-size: clamp(24px, 2.6vw, 32px);
 }
 .links{ display: flex; flex-wrap: wrap; gap: 10px; }
 .links a{
-  color: #04121a; text-decoration: none; /* dark text on blue header */
+  color: #04121a; text-decoration: none;
   padding: 8px 10px; border-radius: 10px;
 }
 .links a.active,
@@ -68,7 +67,7 @@ body{
 /* Reduce empty space: tighter hero */
 .compact-hero{ gap: 20px; }
 
-/* ---------- Tabs (with no-JS fallback) ---------- */
+/* ---------- Tabs ---------- */
 .tab{ display: none; }
 .tab.active,
 .tab:target{ display: block; animation: fade .24s ease; }
