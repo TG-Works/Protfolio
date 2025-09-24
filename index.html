@@ -11,8 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <!-- Styles & Script (relative paths for project pages) -->
-  <link rel="stylesheet" href="./style.css?v=13" />
+  <link rel="stylesheet" href="./style.css?v=14" />
   <script src="./main.js?v=13" defer></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Toni Grubesic",
+    "jobTitle":"Mechanical Engineer",
+    "url":"https://tg-works.github.io/Portfolio/",
+    "sameAs":[
+      "https://github.com/TG-Works",
+      "https://www.linkedin.com/in/toni-grubesic-24b116348/"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- HEADER / NAV -->
@@ -27,14 +42,15 @@
         <a href="#home" data-tab="home" role="tab" aria-controls="home" aria-selected="true" aria-current="page">Home</a>
         <a href="#projects" data-tab="projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
         <a href="#experience" data-tab="experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
+        <a href="#skills" data-tab="skills" role="tab" aria-controls="skills" aria-selected="false">Skills</a>
         <a href="#resume" data-tab="resume" role="tab" aria-controls="resume" aria-selected="false">Resume</a>
         <a href="#contact" data-tab="contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
 
         <!-- theme toggle (not a tab) -->
         <button id="theme-toggle" class="button ghost" type="button" aria-pressed="false" title="Toggle theme">🌙</button>
 
-        <!-- open/download PDF directly (not a tab) -->
-        <a class="button ghost" href="./assets/Toni_Grubesic_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <!-- direct download (points to CV) -->
+        <a class="button ghost" href="./assets/Toni_Grubesic_CV.pdf" target="_blank" rel="noopener">Download CV</a>
       </div>
     </nav>
   </header>
@@ -68,7 +84,7 @@
 
           <div class="actions">
             <a class="button primary" href="#projects" data-tab="projects" role="tab" aria-controls="projects">See Projects</a>
-            <a class="button" href="./assets/Toni_Grubesic_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            <a class="button" href="./assets/Toni_Grubesic_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
           </div>
         </div>
 
@@ -81,45 +97,41 @@
     <!-- PROJECTS -->
     <section id="projects" class="tab" role="tabpanel" aria-labelledby="nav-projects">
       <h2>Projects</h2>
-      <p class="muted">High-level first. Click to expand for build details and outcomes.</p>
+      <p class="muted">Problem → Solution → Result. Click to expand.</p>
 
       <details class="card">
+        <summary><strong>Battery Press &amp; Automation System (LLNL)</strong> <span class="muted">• 2024–2025</span></summary>
+        <div>
+          <p><strong>Problem:</strong> Assemble & test experimental batteries under controlled pressure & temperature with repeatability and safety.</p>
+          <p><strong>Solution:</strong> Designed/built a precision press (miniature, tight-tolerance components). Integrated into Python/LabVIEW rigs (cyclers, PSUs, chambers) via SCPI/serial with modular drivers, recipe executors, and QC/safety interlocks.</p>
+          <p><strong>Result:</strong> Higher repeatability & compliance; faster analysis/reporting (pandas/matplotlib); documented procedures and training for researchers.</p>
+          <ul class="muted">
+            <li>Calibration & commissioning support; traceable runs & automated reports.</li>
+            <li>Operator docs and handoff package for lab users.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="card" style="margin-top:12px">
         <summary><strong>Motorcycle Telemetry &amp; Lean-Angle System</strong> <span class="muted">• 2024–present</span></summary>
         <div>
-          <p>
-            Raspberry Pi 5 on-bike telemetry platform with IMU + GNSS + TFT UI. Reliable lean-angle, g-load, GPS speed/track,
-            and select ECU parameters in a weather-resistant package.
-          </p>
-          <ul>
-            <li><strong>Sensors</strong>: BNO085 (9-DoF) orientation; u-blox NEO-M9N GNSS for track/speed.</li>
-            <li><strong>UI</strong>: Multi-page TFT dashboard (ride metrics, trail mode, settings); smooth page transitions.</li>
-            <li><strong>Firmware</strong>: Python/CircuitPython drivers; Kalman-style smoothing; rate limiting &amp; hysteresis.</li>
-            <li><strong>Electrical</strong>: Custom harness with keyed, waterproof connectors; inline protection &amp; strain relief.</li>
-            <li><strong>Mechanical</strong>: 3D-printed housing with vibration isolation; weather-seal gaskets.</li>
-            <li><strong>Status</strong>: Stage-1 outdoor validation complete; Stage-2 waterproof integration in progress.</li>
-          </ul>
-          <p class="muted">Next: SD logging, ECU temps/AFR, TPMS integration.</p>
-        </div>
-      </details>
-
-      <details class="card" style="margin-top:12px">
-        <summary><strong>Ultracold Atom Chamber — Mechanical Hardware</strong> <span class="muted">• 2022–2023</span></summary>
-        <div>
-          <ul>
-            <li>Fabricated/assembled UHV components; alignment jigs for optical access &amp; thermal management.</li>
-            <li>Specified materials/finishes for vacuum compatibility; supported bake-out &amp; leak-check cycles.</li>
-            <li>Worked with the physics team to balance mechanical tolerances with optical alignment constraints.</li>
+          <p><strong>Problem:</strong> Real-time telemetry with robust lean angle and ride metrics that survives vibration and weather.</p>
+          <p><strong>Solution:</strong> Custom harness + enclosure; 9-axis IMU + GNSS + ECU; fusion/filtering; multi-page TFT UI; waterproof connectors & strain relief.</p>
+          <p><strong>Result:</strong> Stable telemetry with reliable lean-angle tracking; ready for extended validation & waterproofing.</p>
+          <ul class="muted">
+            <li>Next: SD logging, ECU temps/AFR, TPMS integration.</li>
           </ul>
         </div>
       </details>
 
       <details class="card" style="margin-top:12px">
-        <summary><strong>Battery Test Fixtures &amp; Automation</strong> <span class="muted">• 2023–2024</span></summary>
+        <summary><strong>SAE Baja — Chassis & Fabrication</strong> <span class="muted">• 2022–2023</span></summary>
         <div>
+          <p><strong>Scope:</strong> Contributed to off-road competition chassis with an emphasis on strength, reliability, and repeatability.</p>
           <ul>
-            <li>Designed test fixtures &amp; safety interlocks for automated cycling setups.</li>
-            <li>Python/LabVIEW automation for cycling protocols, DAQ, and templated reports.</li>
-            <li>Documented procedures; operator checklists; wiring diagrams &amp; labeling.</li>
+            <li>Machining of precision components; TIG/MIG welding; structural fabrication.</li>
+            <li>Fixtures/jigs for repeatable assembly and alignment.</li>
+            <li>Testing/inspection for rigidity, durability, and safety compliance.</li>
           </ul>
         </div>
       </details>
@@ -130,49 +142,91 @@
       <h2>Experience</h2>
       <div class="timeline">
         <div class="item">
-          <strong>Lawrence Livermore National Laboratory</strong> — Battery Test Automation
-          <div class="meta">2023–2024 · Python, LabVIEW, DAQ, safety interlocks</div>
+          <strong>Automation Engineer (Battery Testing) — Contract</strong> — Lawrence Livermore National Laboratory (LLNL), Livermore, CA
+          <div class="meta">2024–2025 · Python, LabVIEW, DAQ, SCPI/serial, QC &amp; safety interlocks</div>
           <ul>
-            <li>Automated cycling &amp; logging workflows; generated fast-turn reports for performance analysis.</li>
-            <li>Designed/validated fixtures with interlocks and E-stop logic for safe unattended runs.</li>
-            <li>Standardized wiring/labels; wrote procedures for handoff to lab users.</li>
+            <li>Designed/built a precision press for experimental batteries; integrated into automated rigs (cyclers, PSUs, chambers).</li>
+            <li>Developed modular drivers &amp; recipe executors with real-time QC/safety; improved repeatability &amp; compliance.</li>
+            <li>Automated analysis/reporting; authored user documentation and trained researchers.</li>
           </ul>
         </div>
         <div class="item">
-          <strong>Harder Mechanical</strong> — Project Engineer Intern
-          <div class="meta">2023 · Scheduling, cost control, vendor coordination</div>
+          <strong>Undergraduate Research Assistant — Ultralow-Temperature Systems</strong> — CSU Chico
+          <div class="meta">2022–2024</div>
           <ul>
-            <li>Maintained Primavera P6 schedules; helped with change orders and materials take-offs.</li>
+            <li>Contributed to vacuum test chamber for ultracold atom experiments; precision components &amp; alignment.</li>
+            <li>CAD, tolerance analysis, materials selection for extreme conditions; presented in design reviews.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <strong>Project Engineer Intern</strong> — Harder Mechanical Contractors, Inc.
+          <div class="meta">Summer 2024 · Scheduling, cost control, vendor coordination</div>
+          <ul>
+            <li>Maintained Primavera P6 schedules; supported RFIs/submittals/change orders and materials take-offs.</li>
             <li>Coordinated vendor quotes/lead times; kept site teams unblocked.</li>
           </ul>
         </div>
         <div class="item">
-          <strong>GB Heating &amp; AC</strong> — Field / Service
-          <div class="meta">2016–present</div>
+          <strong>HVAC Technician &amp; Service Coordinator</strong> — GB Heating &amp; AC, Pacheco, CA
+          <div class="meta">2017–2025</div>
           <ul>
-            <li>Diagnostics and installs; customer requirements → solutions; hands-on build/repair.</li>
+            <li>Diagnostics and installs; customer requirements → solutions; hands-on build/repair and documentation.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- RESUME (inline PDF viewer) -->
+    <!-- SKILLS -->
+    <section id="skills" class="tab" role="tabpanel" aria-labelledby="nav-skills">
+      <h2>Skills &amp; Tooling</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Battery &amp; Test Systems</h3>
+          <p class="tagset">
+            <span>Python (SCPI/serial)</span><span>LabVIEW</span><span>DAQ integration</span>
+            <span>QC thresholds</span><span>Safety interlocks</span><span>Automated pipelines</span>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Mechanical Design &amp; CAD</h3>
+          <p class="tagset">
+            <span>SolidWorks</span><span>Fusion 360</span><span>GD&amp;T</span>
+            <span>Tolerance analysis</span><span>Fixtures &amp; jigs</span><span>Drawings</span>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fabrication &amp; Prototyping</h3>
+          <p class="tagset">
+            <span>3-axis CNC</span><span>Manual mill/lathe</span><span>TIG/MIG</span>
+            <span>Sheet metal</span><span>CF layup</span><span>3D printing (FDM/CF)</span>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Analysis &amp; Project Tools</h3>
+          <p class="tagset">
+            <span>FEA (static/thermal/modal)</span><span>DFM/DFA</span><span>Git</span>
+            <span>Excel/Sheets</span><span>Primavera P6</span><span>Tech docs</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME / CV (inline PDF viewer) -->
     <section id="resume" class="tab" role="tabpanel" aria-labelledby="nav-resume">
-      <h2>Resume</h2>
+      <h2>Resume / CV</h2>
       <p class="muted">View inline or open in a new tab.</p>
 
       <div class="card" style="padding:0; overflow:hidden;">
-        <!-- Put your PDF at ./assets/Toni_Grubesic_Resume.pdf -->
         <iframe
-          src="./assets/Toni_Grubesic_Resume.pdf#view=FitH"
-          title="Toni Grubesic — Resume (PDF)"
+          src="./assets/Toni_Grubesic_CV.pdf#view=FitH"
+          title="Toni Grubesic — CV (PDF)"
           style="width:100%; height:70vh; border:0;"
         ></iframe>
       </div>
 
       <div class="actions" style="margin-top:10px;">
-        <a class="button primary" href="./assets/Toni_Grubesic_Resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
-        <a class="button" href="./assets/Toni_Grubesic_Resume.pdf" download>Download PDF</a>
+        <a class="button primary" href="./assets/Toni_Grubesic_CV.pdf" target="_blank" rel="noopener">Open CV in new tab</a>
+        <a class="button" href="./assets/Toni_Grubesic_CV.pdf" download>Download CV (PDF)</a>
       </div>
     </section>
 
@@ -184,7 +238,7 @@
         <a href="mailto:tonigrubesic2002@gmail.com">Email: tonigrubesic2002@gmail.com</a>
         <a href="https://github.com/TG-Works" target="_blank" rel="noopener">GitHub: TG-Works</a>
         <a href="https://www.linkedin.com/in/toni-grubesic-24b116348/" target="_blank" rel="noopener">LinkedIn: Toni Grubesic</a>
-        <a href="./assets/Toni_Grubesic_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a href="./assets/Toni_Grubesic_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
       </div>
     </section>
   </main>
