@@ -107,9 +107,10 @@ body{
 .actions{ display:flex; gap:10px; margin-top:10px; }
 
 /* ---------- Typography / cards ---------- */
-h1,h2{ line-height:1.15; }
+h1,h2,h3{ line-height:1.15; }
 h1{ font-size: clamp(28px, 3vw, 42px); margin: 8px 0; }
 h2{ font-size: clamp(22px, 2.4vw, 30px); margin: 6px 0 12px; }
+h3{ font-size: clamp(18px, 2vw, 22px); margin: 4px 0 8px; }
 
 .card, details.card{
   background: var(--surf);
@@ -142,12 +143,22 @@ details.card > div{ padding: 0 16px 16px; }
   border:1px solid #2a3042; background: var(--surf);
 }
 
+/* ---------- Skills & Contact grids ---------- */
+.skills-grid,
+.contact-grid { display:grid; gap:12px; }
+.skills-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.contact-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.tagset { display:flex; flex-wrap:wrap; gap:8px; }
+.tagset span { padding:6px 10px; border:1px solid var(--border); border-radius:12px; background: var(--surf); }
+
 /* ---------- Focus & mobile ---------- */
 :focus-visible{ outline: 2px solid var(--brand); outline-offset:2px; }
 
 @media (max-width: 900px){
   .hero{ grid-template-columns: 1fr; }
   .quick-grid{ grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- No-JS info ---------- */
@@ -175,4 +186,12 @@ details.card > div{ padding: 0 16px 16px; }
 :root[data-theme="light"] .links a[aria-current="page"]{
   background: rgba(0,0,0,.06);
   outline: 1px solid #d7dae3;
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .site-header, .links, .hero-media, .actions { display:none !important; }
+  body { background:#fff; color:#000; }
+  .tab { display:block !important; } /* print all sections */
+  a::after { content:" (" attr(href) ")"; font-size:90%; }
 }
