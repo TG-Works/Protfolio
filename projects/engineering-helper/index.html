@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Engineering Helper: a mechanical engineering software and design productivity tool with calculators, references, material data, and an engineering notebook.">
+  <meta name="theme-color" content="#111210">
+  <title>Engineering Helper — Toni Grubesic</title>
+  <link rel="canonical" href="https://tg-works.github.io/Protfolio/projects/engineering-helper/">
+  <link rel="icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css?v=20">
+  <script src="../../main.js?v=20" defer></script>
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#main">Skip to content</a><div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" data-header><div class="shell nav-shell">
+    <a class="wordmark" href="../../index.html" aria-label="Return to Toni Grubesic portfolio"><span class="wordmark-mark">TG</span><span class="wordmark-copy">Mechanical Design Engineer</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span>Menu</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Project navigation" data-nav><a href="../../index.html#work">Selected work</a><a href="#modules">Modules</a><a href="#decisions">Design decisions</a><a href="#roadmap">Roadmap</a><a href="../../index.html#contact">Contact</a></nav>
+  </div></header>
+
+  <main id="main">
+    <section class="project-hero section-grid"><div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Portfolio</a><span>/</span><span>Engineering Software</span></nav>
+      <p class="project-number">Project 04 · Product architecture · 2026</p>
+      <h1 class="project-title">Engineering<br>Helper</h1>
+      <div class="project-intro"><p>A mechanical-design productivity tool that brings frequently used calculations, reference data, design checks, and engineering notes into one focused workspace.</p><div class="project-status">Active development<br>Iterative releases</div></div>
+      <div class="project-visual media-placeholder media-helper reveal" role="img" aria-label="Placeholder for Engineering Helper interface"><span class="media-label">[ ENGINEERING HELPER DASHBOARD ]</span><span class="media-note">Recommended: 2400 × 1500 px interface screenshot</span></div>
+    </div></section>
+
+    <section class="project-overview"><div class="shell"><dl class="project-facts">
+      <div><dt>Role</dt><dd>Product owner · designer · developer</dd></div><div><dt>Status</dt><dd>Active development</dd></div><div><dt>Platform</dt><dd>Responsive web application</dd></div><div><dt>Tools</dt><dd>HTML · CSS · JavaScript · Git</dd></div><div><dt>Focus</dt><dd>Mechanical design productivity</dd></div>
+    </dl></div></section>
+
+    <div class="project-body shell">
+      <section class="project-section reveal"><p class="section-label">01 / Product problem</p><div class="project-content">
+        <h2>Reduce friction in everyday mechanical design work.</h2>
+        <p>Common engineering tasks are spread across handbooks, bookmarked websites, spreadsheets, reference charts, calculators, and handwritten notes. The goal is a coherent workspace that shortens lookup time without hiding assumptions, units, or equations.</p>
+        <ul class="requirement-list">
+          <li><strong>Fast access</strong><span>Reach common tools in a few clicks with a clear dashboard and search hierarchy.</span></li><li><strong>Unit awareness</strong><span>Keep inputs, outputs, material values, and calculated properties consistent across unit systems.</span></li><li><strong>Transparent calculations</strong><span>Show equations, variable definitions, assumptions, and valid ranges where useful.</span></li><li><strong>Practical references</strong><span>Prioritize threads, drills, fits, materials, fasteners, geometry, beams, and seals.</span></li><li><strong>Progressive complexity</strong><span>Keep simple tasks quick while allowing advanced inputs and explanation when needed.</span></li><li><strong>Engineering notes</strong><span>Support movable text, sketches, arrows, dimensions, and grid-paper thinking.</span></li>
+        </ul>
+      </div></section>
+
+      <section class="project-section reveal" id="modules"><p class="section-label">02 / Module architecture</p><div class="project-content">
+        <h2>One workspace, organized by design task.</h2>
+        <div class="system-grid">
+          <article class="system-card"><span>Core</span><h3>Calculators</h3><p>Regular, scientific, graphing, geometry, mass, unit conversion, and persistent calculation history.</p></article>
+          <article class="system-card"><span>Hardware</span><h3>Fasteners &amp; Threads</h3><p>Metric, UNC, and UNF data; drills, torque guidance, joint checks, and explanatory references.</p></article>
+          <article class="system-card"><span>Design</span><h3>Tolerances &amp; Fits</h3><p>Tolerance stack-up, fits and clearances, drawing references, and GD&amp;T guidance.</p></article>
+          <article class="system-card"><span>Analysis</span><h3>Structures</h3><p>Section properties, beam bending, material reference, and geometry-based calculations.</p></article>
+          <article class="system-card"><span>Sealing</span><h3>O-Rings &amp; Glands</h3><p>Guidance for seal selection, gland geometry, squeeze, and design-check workflows.</p></article>
+          <article class="system-card"><span>Workspace</span><h3>Engineering Notebook</h3><p>Grid paper with movable/resizable text, drawing, arrows, dimensions, and flexible note layout.</p></article>
+          <article class="system-card"><span>References</span><h3>Materials &amp; Tables</h3><p>Metals and plastics, common properties, drill references, standards, and compact lookup tables.</p></article>
+          <article class="system-card"><span>Process</span><h3>Design Checklist</h3><p>Prompts for requirements, loads, interfaces, tolerance, DFM, verification, and release readiness.</p></article>
+          <article class="system-card"><span>Roadmap</span><h3>Machine Elements</h3><p>Bearings, springs, gears, belts/chains, welds, fatigue, pressure vessels, and vibration tools.</p></article>
+        </div>
+      </div></section>
+
+      <section class="project-section reveal" id="decisions"><p class="section-label">03 / Product decisions</p><div class="project-content">
+        <h2>Design the interface around engineering behavior.</h2>
+        <table class="decision-table"><thead><tr><th>Decision</th><th>Reasoning</th><th>Current validation need</th></tr></thead><tbody>
+          <tr><td>Simple / advanced modes</td><td>Keep routine inputs fast while preserving deeper controls and explanation</td><td>Confirm which inputs should remain visible by default</td></tr><tr><td>Unit toggle in every tool</td><td>Prevent results from silently remaining in a previous or incompatible unit system</td><td>Test propagation through geometry, mass, material, and output fields</td></tr><tr><td>Calculator memory and history</td><td>Support repeated design calculations without copying values between tools</td><td>Validate MC/MR/M+/M− behavior and expression reset rules</td></tr><tr><td>Graphing as an engineering aid</td><td>Visualize relationships such as trigonometric functions and polynomial behavior</td><td>Improve parser coverage and plotting reliability for sin, cos, and x²</td></tr><tr><td>Canvas-like notebook</td><td>Match how engineers place notes, arrows, dimensions, and sketches spatially</td><td>Improve click-to-type, text sizing, movement, and resizing</td></tr>
+        </tbody></table>
+        <div class="image-pair"><div class="media-block media-placeholder" role="img" aria-label="Placeholder for calculator interface"><span class="media-label">[ CALCULATOR / UNIT WORKFLOW ]</span></div><div class="media-block media-placeholder" role="img" aria-label="Placeholder for engineering notebook interface"><span class="media-label">[ GRID NOTEBOOK / DRAWING WORKFLOW ]</span></div></div>
+      </div></section>
+
+      <section class="project-section reveal"><p class="section-label">04 / Iteration model</p><div class="project-content">
+        <h2>Use real design work to expose failure modes.</h2>
+        <p>The tool is developed through use, not only feature checklists. Problems such as incorrect unit propagation, incomplete expression parsing, calculator memory behavior, and awkward notebook interaction become explicit revision inputs.</p>
+        <div class="engineering-flow"><div><span>01</span><strong>Use the tool</strong></div><div><span>02</span><strong>Observe friction</strong></div><div><span>03</span><strong>Revise behavior</strong></div><div><span>04</span><strong>Regression test</strong></div></div>
+        <div class="callout"><span>Product principle</span><p>A compact tool is only useful if its units, state, equations, and interaction behavior are trustworthy.</p></div>
+      </div></section>
+
+      <section class="project-section reveal" id="roadmap"><p class="section-label">05 / Roadmap</p><div class="project-content">
+        <h2>Stabilize the core before expanding.</h2>
+        <table class="decision-table"><thead><tr><th>Priority</th><th>Workstream</th><th>Definition of progress</th></tr></thead><tbody>
+          <tr><td>01</td><td>Core calculators and unit model</td><td>Predictable state, memory, history, graphing, and unit propagation</td></tr><tr><td>02</td><td>Pressure and flow tools</td><td>Clear inputs, documented equations, useful outputs, and dimensional checks</td></tr><tr><td>03</td><td>Engineering notebook</td><td>Reliable text placement, resizing, drawing, arrows, and dimensions</td></tr><tr><td>04</td><td>References and explanations</td><td>Consistent tables, diagrams, joint-check guidance, and source notes</td></tr><tr><td>05</td><td>Machine-element tools</td><td>Add bearings, springs, gears, belts/chains, welds, fatigue, and vibration incrementally</td></tr>
+        </tbody></table>
+      </div></section>
+    </div>
+
+    <section class="result-band section-grid"><div class="shell section-split reveal"><div><p class="eyebrow">Design intent</p><h2>Software shaped by mechanical-engineering workflow.</h2></div><div><p class="large-copy">Engineering Helper is both a productivity product and an exercise in requirements, interface design, validation, data organization, and disciplined iteration.</p></div></div></section>
+    <section class="next-project"><div class="shell"><a href="../sv650/"><span>Next case study<strong>2005 SV650 Track Development</strong></span><i>→</i></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell"><span>© <span data-year>2026</span> Toni Grubesic</span><span>Engineering Helper / Design Productivity</span><a href="#main">Back to top ↑</a></div></footer>
+</body>
+</html>

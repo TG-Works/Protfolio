@@ -1,27 +1,56 @@
-# Toni-Grubesic
+# Toni Grubesic — Mechanical Design Engineering Portfolio
 
-**Mechanical Engineer — Test Automation • DFM • Prototyping**
+A static, responsive engineering portfolio focused on product development, validation, manufacturing support, test systems, and hands-on mechanical work.
 
-I design and build systems that work in the lab *and* on the floor—combining Python/LabVIEW instrument control, CAD/CAM, and hands-on manufacturing (CNC, welding, composites, 3D printing). My recent work spans battery testing automation, environmental chambers, and on-bike telemetry.
+**Live site:** [https://tg-works.github.io/Protfolio/](https://tg-works.github.io/Protfolio/)
 
-- **What I do:** multi-instrument control (SCPI/serial), data pipelines & QC, test fixtures, rugged enclosures, DFM/DFA.
-- **Domains:** batteries & thermal, HVAC systems, automotive/motorcycle electronics.
-- **Values:** repeatable tests, safety interlocks, readable code, version control, clear documentation.
+## Portfolio hierarchy
 
-### Toolbox
-- **Software:** Python (pandas, matplotlib; serial/SCPI), LabVIEW, MATLAB, SolidWorks, Fusion 360, GD&T, basic FEA, Fusion CAM, Git
-- **Hardware:** DAQ, battery cyclers, PSUs, environmental chambers, 3-axis CNC, manual mill/lathe, MIG/TIG, carbon fiber layup, FDM printing (PETG/TPU)
-- **Protocols:** UART/I²C/SPI, CAN (basics), TCP/IP
+1. **HEN Technologies — Design Engineering**  
+   Current professional work across mechanical product development, validation, supplier engineering, injection molding, manufacturing support, and release.
+2. **1998 Toyota 4Runner — Vehicle Development**  
+   Reliability, chassis, thermal management, fabrication, electrical systems, cargo, and towing.
+3. **LLNL — Battery Test Automation**  
+   Precision mechanical hardware, controlled loading/heating, instrumentation, automation, and experimental data.
+4. **Engineering Helper**  
+   Mechanical engineering software and design-productivity tooling.
+5. **2005 SV650 — Track Development**  
+   Value-focused motorsport platform for chassis, reliability, rider fit, electrical systems, and data acquisition.
 
-### Selected Projects
-- **Battery Test Automation (LLNL)** — Python/LabVIEW framework orchestrating cyclers, PSUs, and chambers with real-time logging, QC thresholds, and auto-reports.  
-- **Motorcycle Telemetry & Lean-Angle System** — custom PCB + firmware + UI integrating 9-axis IMU, TPMS/ECU, and GPS for real-time analytics.  
-- **SAE Baja (Chassis & Welding)** — designed/welded chassis components; validated for strength/rigidity.
+## Structure
 
-### Currently
-- Building robust, recipe-driven test automation and refining on-bike telemetry UX.
+```text
+/
+├── index.html
+├── style.css
+├── main.js
+├── projects/
+│   ├── hen/
+│   ├── 4runner/
+│   ├── llnl/
+│   ├── engineering-helper/
+│   └── sv650/
+└── assets/
+    ├── images/
+    ├── Toni_Grubesic_Resume.pdf
+    └── Toni_Grubesic_CV.pdf
+```
 
-### Contact
-- 📍 Bay Area, CA  
-- ✉️ tonigrubesic2002@gmail.com  
-- 🔗 LinkedIn: (https://www.linkedin.com/in/toni-grubesic-24b116348/) • Portfolio/GitHub Pages: [(https://github.com/TG-Works/Protfolio)]
+The site uses semantic HTML, a shared CSS design system, and lightweight vanilla JavaScript. No build step or framework is required.
+
+## Adding project media
+
+Replace the clearly labeled image placeholders in the HTML after adding approved media under `assets/images/<project>/`.
+
+Recommended source sizes:
+
+- Project hero: `2400 × 1500 px`, landscape
+- Supporting case-study image: `1800 × 1200 px`, landscape
+- Drawings and diagrams: SVG when possible, or PNG at least `1800 px` wide
+- Interface screenshots: `2400 × 1500 px`
+
+Do not publish proprietary dimensions, customer information, confidential HEN performance data, or unapproved product imagery.
+
+## Deployment
+
+Pushing to `main` triggers the GitHub Pages workflow in `.github/workflows/deploy.yml`.

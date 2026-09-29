@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LLNL battery test automation case study: precision press hardware, heating, sensors, automated instrumentation, data logging, and safety interlocks.">
+  <meta name="theme-color" content="#111210">
+  <title>LLNL Battery Test Automation — Toni Grubesic</title>
+  <link rel="canonical" href="https://tg-works.github.io/Protfolio/projects/llnl/">
+  <link rel="icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css?v=20">
+  <script src="../../main.js?v=20" defer></script>
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#main">Skip to content</a><div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" data-header><div class="shell nav-shell">
+    <a class="wordmark" href="../../index.html" aria-label="Return to Toni Grubesic portfolio"><span class="wordmark-mark">TG</span><span class="wordmark-copy">Mechanical Design Engineer</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span>Menu</span><i aria-hidden="true"></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Project navigation" data-nav><a href="../../index.html#work">Selected work</a><a href="#architecture">Architecture</a><a href="#hardware">Hardware</a><a href="#validation">Validation</a><a href="../../index.html#contact">Contact</a></nav>
+  </div></header>
+
+  <main id="main">
+    <section class="project-hero section-grid"><div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Portfolio</a><span>/</span><span>Test Automation</span></nav>
+      <p class="project-number">Project 03 · Experimental systems · 2024–2025</p>
+      <h1 class="project-title">LLNL Battery<br>Test Automation</h1>
+      <div class="project-intro"><p>Precision mechanical hardware and automated instrumentation for repeatable battery experiments under controlled force, pressure, and temperature.</p><div class="project-status">Completed engineering work<br>Technical summary</div></div>
+      <div class="project-visual media-placeholder reveal" role="img" aria-label="Placeholder for LLNL battery press and test system image"><span class="media-label">[ BATTERY PRESS / AUTOMATION RIG PHOTO ]</span><span class="media-note">Recommended: 2400 × 1500 px · approved hardware image only</span></div>
+    </div></section>
+
+    <section class="project-overview"><div class="shell"><dl class="project-facts">
+      <div><dt>Role</dt><dd>Mechanical / automation engineering</dd></div><div><dt>Organization</dt><dd>Lawrence Livermore National Laboratory</dd></div><div><dt>Timeline</dt><dd>2024–2025</dd></div><div><dt>Tools</dt><dd>Python · LabVIEW · DAQ · CAD</dd></div><div><dt>Disciplines</dt><dd>Precision hardware · controls · test</dd></div>
+    </dl></div></section>
+
+    <div class="project-body shell">
+      <section class="project-section reveal"><p class="section-label">01 / Engineering problem</p><div class="project-content">
+        <h2>Create a repeatable experimental environment.</h2>
+        <p>Battery experiments required controlled mechanical loading and temperature, coordinated instrumentation, traceable data, and safeguards suitable for laboratory operation. The system had to join precision mechanical design with automation and clear operator procedures.</p>
+        <ul class="requirement-list">
+          <li><strong>Controlled loading</strong><span>Apply and maintain a defined mechanical force or pressure condition.</span></li><li><strong>Thermal capability</strong><span>Integrate heating while protecting sensors, interfaces, and surrounding hardware.</span></li><li><strong>Instrument coordination</strong><span>Connect cyclers, power supplies, chambers, sensors, and data acquisition.</span></li><li><strong>Repeatability</strong><span>Use controlled geometry, calibration, recipes, and documented procedures.</span></li><li><strong>Safety</strong><span>Use interlocks, thresholds, fault handling, and controlled shutdown behavior.</span></li><li><strong>Traceability</strong><span>Log run conditions and generate data suitable for analysis and reporting.</span></li>
+        </ul>
+      </div></section>
+
+      <section class="project-section reveal" id="architecture"><p class="section-label">02 / System architecture</p><div class="project-content">
+        <h2>Mechanical hardware and automation designed as one system.</h2>
+        <div class="engineering-flow"><div><span>Input</span><strong>Test recipe</strong></div><div><span>Control</span><strong>Python / LabVIEW</strong></div><div><span>Hardware</span><strong>Press / heat / instruments</strong></div><div><span>Output</span><strong>Logged test data</strong></div></div>
+        <div class="system-grid">
+          <article class="system-card"><span>01</span><h3>Mechanical Press</h3><p>Precision components, controlled loading, alignment, sealing, and compact integration.</p></article>
+          <article class="system-card"><span>02</span><h3>Thermal Hardware</h3><p>Heated test region, material selection, sensor placement, and temperature-aware interfaces.</p></article>
+          <article class="system-card"><span>03</span><h3>Motion / Handling</h3><p>Glovebox-compatible equipment and gantry or positioning considerations.</p></article>
+          <article class="system-card"><span>04</span><h3>Instrumentation</h3><p>Sensors, battery cyclers, power supplies, chambers, DAQ, and communication links.</p></article>
+          <article class="system-card"><span>05</span><h3>Automation</h3><p>Modular drivers, recipe execution, state control, thresholds, and fault response.</p></article>
+          <article class="system-card"><span>06</span><h3>Data</h3><p>Traceable logging, analysis workflows, plots, reports, and documented run conditions.</p></article>
+        </div>
+        <div class="media-block media-placeholder" role="img" aria-label="Placeholder for battery test automation system block diagram"><span class="media-label">[ TEST SYSTEM BLOCK DIAGRAM ]</span><span class="media-note">Control computer / instruments / press / heat / DAQ / safety interfaces</span></div>
+      </div></section>
+
+      <section class="project-section reveal" id="hardware"><p class="section-label">03 / Mechanical development</p><div class="project-content">
+        <h2>Design the experiment into the hardware.</h2>
+        <p>The press and test fixture were not passive structures. Alignment, contact interfaces, gasket behavior, heat flow, force transfer, access, and calibration all affected the quality of the experiment.</p>
+        <table class="decision-table"><thead><tr><th>Design area</th><th>Engineering concern</th><th>Evidence slot</th></tr></thead><tbody>
+          <tr><td>Load path</td><td>Controlled force transfer without unwanted bending or misalignment</td><td>Section view / load-path diagram</td></tr><tr><td>Sealing interface</td><td>Gasket compression, temperature compatibility, and repeatable assembly</td><td>Interface detail / material rationale</td></tr><tr><td>Thermal design</td><td>Heat delivery, sensor location, losses, and component limits</td><td>Thermal model / temperature plot</td></tr><tr><td>Calibration</td><td>Relate commanded conditions to actual measured test state</td><td>Calibration method / traceability record</td></tr><tr><td>Operator use</td><td>Assembly sequence, safe access, error prevention, and maintenance</td><td>Annotated procedure or exploded view</td></tr>
+        </tbody></table>
+        <div class="image-pair"><div class="media-block media-placeholder" role="img" aria-label="Placeholder for battery press CAD"><span class="media-label">[ PRESS CAD / SECTION VIEW ]</span></div><div class="media-block media-placeholder" role="img" aria-label="Placeholder for fabricated battery press"><span class="media-label">[ FABRICATED PRESS / FIXTURE PHOTO ]</span></div></div>
+      </div></section>
+
+      <section class="project-section reveal" id="validation"><p class="section-label">04 / Controls &amp; validation</p><div class="project-content">
+        <h2>Automate the routine while making faults visible.</h2>
+        <p>Modular instrument control and recipe execution made test conditions more repeatable. QC thresholds and safety checks were designed to interrupt or flag runs when measured behavior departed from the intended envelope.</p>
+        <ul class="requirement-list">
+          <li><strong>Modular drivers</strong><span>Separate instrument communication from test-sequence logic.</span></li><li><strong>Recipe execution</strong><span>Define a repeatable sequence of setup, control, logging, and completion steps.</span></li><li><strong>Live QC</strong><span>Compare measured values with expected limits during operation.</span></li><li><strong>Fault handling</strong><span>Provide explicit responses for loss of communication, limit violations, or operator stops.</span></li><li><strong>Analysis pipeline</strong><span>Organize data for repeatable review, plotting, and reporting.</span></li><li><strong>Handoff</strong><span>Document calibration, operation, maintenance, and known limitations for researchers.</span></li>
+        </ul>
+        <div class="media-block media-placeholder" role="img" aria-label="Placeholder for battery test data plot"><span class="media-label">[ APPROVED TEST DATA / CONTROL SCREEN ]</span><span class="media-note">Use de-identified data with axes, units, acceptance bands, and observation callouts</span></div>
+        <div class="callout"><span>Result</span><p>The completed system improved repeatability, traceability, and operator handoff through controlled hardware, instrument automation, structured data, and documented procedures.</p></div>
+      </div></section>
+    </div>
+
+    <section class="result-band section-grid"><div class="shell section-split reveal"><div><p class="eyebrow">Core lesson</p><h2>Test quality begins with system design.</h2></div><div><p class="large-copy">Mechanical interfaces, sensors, software, safety logic, and operating procedures all shape the validity of an experimental result.</p></div></div></section>
+    <section class="next-project"><div class="shell"><a href="../engineering-helper/"><span>Next case study<strong>Engineering Helper</strong></span><i>→</i></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell"><span>© <span data-year>2026</span> Toni Grubesic</span><span>LLNL / Battery Test Automation</span><a href="#main">Back to top ↑</a></div></footer>
+</body>
+</html>
